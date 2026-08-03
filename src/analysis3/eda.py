@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 탐색적 데이터 분석 (노트북 2절): 이탈 분포, 상관관계, 수치형/이진형 변수 분석.
 """
@@ -57,3 +58,12 @@ def plot_binary_churn_rates(df, binary_features=BINARY_FEATURES):
         ax.set_ylim(0, 1)
     plt.tight_layout()
     plt.show()
+=======
+# eda
+from src.common import load_data # 데이터 불러오기 모듈
+
+# 예시
+def test2():
+    df = load_data()
+    return df.head()
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

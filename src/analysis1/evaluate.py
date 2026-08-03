@@ -1,4 +1,5 @@
 # 평가
+<<<<<<< HEAD
 from src.common import SEED, load_data # 데이터 불러오기 모듈
 
 import pandas as pd
@@ -178,3 +179,12 @@ def plot_k_validation(results):
 
     plt.tight_layout()
     return fig
+=======
+from src.common import load_data # 데이터 불러오기 모듈
+
+# 저장 한 모델을 불러와서 평가
+# 예시
+def test3():
+    df = load_data()
+    return df.columns.tolist()
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

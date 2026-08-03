@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """분석 4 — 헬스장 고객 이탈 분석
 
 모듈 구성
@@ -22,3 +23,13 @@
 """
 
 __all__ = ["features", "eda", "classification", "regression", "clustering"]
+=======
+# 예시 추후 수정
+from .eda import test2 as eda_test
+from .evaluate import test3 as evaluate_test
+
+# 사용법
+"""
+from src.analysis4 import eda_test, evaluate_test
+"""
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

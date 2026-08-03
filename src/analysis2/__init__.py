@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from .eda import (
     test2 as eda_test,
     get_summary,
@@ -20,4 +21,13 @@ from .advanced import test1 as advanced_test
 # 사용법
 """
 from src.analysis2 import eda_test, evaluate_test, get_key_features_by_churn, plot_correlation_heatmap, plot_confusion_matrix, plot_feature_importance, MODEL_NAMES
+=======
+# 예시 추후 수정
+from .eda import test2 as eda_test
+from .evaluate import test3 as evaluate_test
+
+# 사용법
+"""
+from src.analysis2 import eda_test, evaluate_test
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 """

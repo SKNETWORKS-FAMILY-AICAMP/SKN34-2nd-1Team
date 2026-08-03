@@ -1,4 +1,5 @@
 import streamlit as st
+<<<<<<< HEAD
 import pandas as pd
 from sklearn.model_selection import train_test_split
 import matplotlib.pylab as plt
@@ -47,11 +48,21 @@ st.write(
     "고객의 이용기간, 나이, 최근 방문 빈도, 계약기간을 기반으로 "
     "고객군을 분류하고 군집별 이탈률을 분석합니다."
 )
+=======
+from src.common import load_data # 데이터 불러오기 모듈
+from src.analysis1 import eda_test, evaluate_test # 예시 추후 수정
+
+# 내용 추후 수정
+st.set_page_config(page_title="주제", page_icon="📊")
+st.title("주제")
+st.write("간략설명")
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 
 # 데이터 불러오기
 df = load_data()
 
 if df is not None:
+<<<<<<< HEAD
     # 분석 데이터 준비
     cluster_df = get_cluster_data(df)
     cluster_features = ["Lifetime", "Age", "Avg_class_frequency_current_month", "Contract_period"]
@@ -240,5 +251,21 @@ if df is not None:
         st.markdown("### 📌 분석 요약")
         st.write("고도화 모델의 PCA 분포도는 군집 경계가 더 분명해진 방향으로 개선된 것으로 해석할 수 있습니다.")
 
+=======
+    tab1, tab2, tab3 = st.tabs(["EDA", "학습/추론 평가", "고도화 전/후 평가"])
+	
+	# 탭 별 내용은 추후 수정
+    with tab1:
+        st.subheader("EDA")
+        st.dataframe(eda_test())
+
+    with tab2:
+        st.subheader("학습/추론 평가")
+        st.write(evaluate_test())
+
+    with tab3:
+        st.subheader("고도화 전/후 평가")
+        st.write(evaluate_test())
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 else:
     st.warning("데이터를 불러올 수 없습니다.")

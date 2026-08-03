@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """분석 4 — 탐색적 데이터 분석 (노트북 1~7절 이관)
 
 노트북 `notebooks/analysis4.ipynb`의 시각화·요약을 재사용 가능한 함수로 옮긴 모듈.
@@ -429,3 +430,12 @@ if __name__ == "__main__":
     figures = all_figures(df)
     print("=" * 70)
     print(f"Figure {len(figures)}개 생성: {list(figures)}")
+=======
+# eda
+from src.common import load_data # 데이터 불러오기 모듈
+
+# 예시
+def test2():
+    df = load_data()
+    return df.head()
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

@@ -1,10 +1,17 @@
 import streamlit as st
+<<<<<<< HEAD
 from src.common import load_data
 from src.analysis2 import (
     eda_test, evaluate_test,
     get_key_features_by_churn, plot_correlation_heatmap,
     plot_confusion_matrix, plot_feature_importance, MODEL_NAMES,
 )
+=======
+from src.common import load_data  # 데이터 불러오기 모듈
+from src.analysis2 import eda_test, evaluate_test
+from src.analysis2.eda import get_key_features_by_churn, plot_correlation_heatmap
+from src.analysis2.evaluate import plot_confusion_matrix, plot_feature_importance, MODEL_NAMES
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 
 st.set_page_config(page_title="분석2: 결정트리 & 랜덤포레스트", page_icon="🌳")
 st.title("분석2: 결정트리 & 랜덤포레스트")
@@ -26,8 +33,11 @@ if df is not None:
         st.markdown("**피처 간 상관관계**")
         st.pyplot(plot_correlation_heatmap(df))
 
+<<<<<<< HEAD
         st.info("📌 이탈 회원은 잔류 회원 대비 계약기간(Contract_period), 가입기간(Lifetime)이 뚜렷하게 짧고 부가서비스 지출도 낮게 나타남 — '짧은 계약 + 낮은 참여'가 이탈의 전형적 패턴")
 
+=======
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
     with tab2:
         st.subheader("학습/추론 평가 (고도화 전 기본 모델)")
         st.dataframe(evaluate_test(stage="base"))
@@ -39,8 +49,11 @@ if df is not None:
         with col2:
             st.pyplot(plot_confusion_matrix("random_forest", stage="base"))
 
+<<<<<<< HEAD
         st.info("📌 랜덤포레스트가 결정트리보다 이탈자를 잔류로 잘못 예측하는 비율(FN)이 낮아, 이탈자를 놓치지 않는 측면에서 더 우수함")
 
+=======
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
     with tab3:
         st.subheader("고도화 전/후 평가")
 
@@ -53,7 +66,10 @@ if df is not None:
         st.markdown("**Feature Importance (고도화 후 모델 기준)**")
         for name in MODEL_NAMES:
             st.pyplot(plot_feature_importance(name, stage="advanced"))
+<<<<<<< HEAD
 
         st.info("📌 가입기간(Lifetime)이 이탈 예측에 가장 큰 영향을 미치며, 최근 수업 참여빈도와 연령이 뒤를 이음 — 최종 채택 모델은 Recall/F1/ROC-AUC 기준 우수한 Random Forest(advanced)")
+=======
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 else:
     st.warning("데이터를 불러올 수 없습니다.")

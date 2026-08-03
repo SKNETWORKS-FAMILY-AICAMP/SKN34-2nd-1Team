@@ -1,7 +1,11 @@
 import streamlit as st
 import altair as alt
 import plotly.express as px
+<<<<<<< HEAD
 from src.common import SEED, load_data
+=======
+from src.common import load_data
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 
 # 데이터 불러오기
 df = load_data()
@@ -201,6 +205,7 @@ with col3:
     st.altair_chart(
         chart,
         use_container_width=True
+<<<<<<< HEAD
     )
     
     st.divider()
@@ -250,3 +255,6 @@ with col3:
     st.write(f"평균 이용기간 **{avg_lifetime:.1f}개월**")
     st.write(f"평균 나이 **{avg_age:.1f}세**")
     st.write(f"평균 방문빈도 **{avg_frequency:.1f}회/월**")
+=======
+    )
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

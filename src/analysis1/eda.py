@@ -1,4 +1,5 @@
 # eda
+<<<<<<< HEAD
 from src.common import SEED, load_data # 데이터 불러오기 모듈
 
 import pandas as pd
@@ -90,3 +91,11 @@ def get_feature_name_mapping():
             "고객의 계약 기간"
         ]
     })
+=======
+from src.common import load_data # 데이터 불러오기 모듈
+
+# 예시
+def test2():
+    df = load_data()
+    return df.head()
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

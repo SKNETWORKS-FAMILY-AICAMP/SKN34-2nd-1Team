@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 from .eda import (
     get_cluster_data,
     get_descriptive_stats,
@@ -36,3 +37,13 @@ from .advanced import (
     validate_k_upgrade,
     plot_k_validation_upgrade
 )
+=======
+# 예시 추후 수정
+from .eda import test2 as eda_test
+from .evaluate import test3 as evaluate_test
+
+# 사용법
+"""
+from src.analysis1 import eda_test, evaluate_test
+"""
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

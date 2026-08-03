@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """분석 4 — 헬스장 고객 이탈 (Streamlit 페이지)
 
 탭 구성은 src/analysis4 모듈 구조를 그대로 따른다.
@@ -1147,3 +1148,34 @@ else:
         render_regression(df, summary)
     with tab_clu:
         render_clustering(df)
+=======
+import streamlit as st
+from src.common import load_data # 데이터 불러오기 모듈
+from src.analysis4 import eda_test, evaluate_test # 예시 추후 수정
+
+# 내용 추후 수정
+st.set_page_config(page_title="주제", page_icon="📊")
+st.title("주제")
+st.write("간략설명")
+
+# 데이터 불러오기
+df = load_data()
+
+if df is not None:
+    tab1, tab2, tab3 = st.tabs(["EDA", "학습/추론 평가", "고도화 전/후 평가"])
+	
+	# 탭 별 내용은 추후 수정
+    with tab1:
+        st.subheader("EDA")
+        st.dataframe(eda_test())
+
+    with tab2:
+        st.subheader("학습/추론 평가")
+        st.write(evaluate_test())
+
+    with tab3:
+        st.subheader("고도화 전/후 평가")
+        st.write(evaluate_test())
+else:
+    st.warning("데이터를 불러올 수 없습니다.")
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7

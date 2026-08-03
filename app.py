@@ -53,7 +53,11 @@ pages = {
 		),
 
 		st.Page(
+<<<<<<< HEAD
 			"pages/predict.py",
+=======
+			"pages/sample_pred.py",
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 			title="예측",
 			icon="🔮"
 		)

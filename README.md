@@ -70,7 +70,11 @@ project_2nd/
 │  │
 │  ├─ common/                  # 팀원 공통 코드
 │  │  ├─ __init__.py
+<<<<<<< HEAD
 │  │  └─ common.py             # 데이터 불러오기
+=======
+│  │  └─ data_loader.py        # 데이터 불러오기
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
 │  │
 │  ├─ prediction/              # 모델 추론 관련 코드
 │  │  └─ __init__.py

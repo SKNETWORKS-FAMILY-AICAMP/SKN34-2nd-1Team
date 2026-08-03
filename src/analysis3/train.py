@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 """
 Streamlit 앱에서 사용할 모델/스케일러/메타데이터를 models/ 폴더에 저장한다.
 """
@@ -132,3 +133,19 @@ with open(MODEL_DIR / "metadata.json", "w", encoding="utf-8") as f:
     json.dump(metadata, f, ensure_ascii=False, indent=2)
 
 print(f"\n저장 완료 -> {MODEL_DIR}/churn_model.pkl, scaler.pkl, metadata.json")
+=======
+# 학습
+from src.common import load_data # 데이터 불러오기 모듈
+
+# 데이터 정제 및 분리 후
+# 해당 모듈에서 모델 저장 후 평가 및 고도화 시 모델 블러와서 사용 
+# 저장 경로 models\analysis3
+# 예시
+def test4():
+    df = load_data()
+    return df.shape
+
+# 해당 페이지를 직접 실행 후 모델 저장
+if __name__ == "__main__":
+    test4()
+>>>>>>> 216054d562f7b743ba18e71e1f7c19e3194538b7
